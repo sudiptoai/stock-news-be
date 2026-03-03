@@ -1,0 +1,18 @@
+spring:
+  cache:
+    type: none
+
+newsapi:
+  api-key: test-newsapi-key
+
+alphavantage:
+  api-key: test-alpha-key
+
+news:
+  provider: newsapi
+
+stock:
+  provider: alphavantage
+
+cors:
+  allowed-origins: http://localhost:3000

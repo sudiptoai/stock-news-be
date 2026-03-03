@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: stock-news-be
+
+# NewsAPI configuration - replace with a real key from https://newsapi.org
+newsapi:
+  api-key: ${NEWSAPI_KEY:demo}
+
+# Alpha Vantage configuration - replace with a real key from https://www.alphavantage.co
+alphavantage:
+  api-key: ${ALPHAVANTAGE_KEY:demo}
+
+# Active provider selection (can be overridden per environment)
+news:
+  provider: newsapi
+
+stock:
+  provider: alphavantage
+
+# CORS - add your frontend origin(s) here or via environment variable
+cors:
+  allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:3000,http://localhost:4200}
+
+logging:
+  level:
+    com.stocknews: INFO
